@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap5/css/bootstrap.min.css">
+    <script src="/bootstrap5/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/icon/font/bootstrap-icons.min.css">
+    <title>Màn hình trang chủ</title>
+    <style>
+        .menu {
+            background-color: #F18903;
+        }
+        .hvmn:hover .item0 {
+            color: #EEF2FA;
+        }
+        .hvmn:hover .item1 {
+            color: #EEF2FA;
+        }
+        .hvmn:hover {
+            background-color: #F18903;
+            border-radius: 5px;
+        }
+        .carousel-indicators [data-bs-target] {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .dropdown-item:hover .bi-box-arrow-right {
+            color: red;
+        }
+        .dropdown-item:hover .dangxuat {
+            color: red;
+        }
+        .carousel-inner .carousel-item {
+            transition: transform 1.5s ease-in-out !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm menu">
+        <div class="container-fluid d-flex">
+            <div class="container">
+                <a href="/web/html/trang_chu.html" class="nav-link"><img src="/web/images/logo.png" alt="" style="width: 150px; height: 30px;"></a>
+            </div>
+            <div class="container d-flex justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link"><i class="bi bi-bell" style="font-size: 20px; padding-right: 5px; color: #004B87;"></i></a></li>
+                    <li class="nav-item"><a href="/web/html/trang_chu_dark_mode.html" class="nav-link"><i class="bi bi-moon" style="font-size: 20px; padding-right: 10px; color: #004B87;"></i></a></li>
+                </ul>
+                <div class="dropdown d-flex pt-1">
+                    <img src="/web/images/avatar.jpg" alt="" class="rounded-circle" style="width: 40px; height: 40px;">
+                    <a href="" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" style="color: #262b33; padding-left: 5px; color: #004B87;">Nguyễn Anh Đức</a>
+                    <ul class="dropdown-menu">
+                        <li><b style="color: #444444; padding-left: 10%;">Nguyễn Anh Đức</b></li>
+                        <li><h3 class="dropdown-header" style="padding-left: 25%;">Quản trị viên</h3></li>
+                        <li><a href="" class="dropdown-item border-top d-flex">
+                            <div><i class="bi bi-person" style="font-size: 20px;"></i></div>
+                            <div style="padding-left: 10px;" class="pt-1">Xem hồ sơ</div>
+                        </a></li>
+                        <li><a href="/web/html/login.html" class="dropdown-item border-top d-flex">
+                            <div><i class="bi bi-box-arrow-right" style="font-size: 20px;"></i></div>
+                            <div style="padding-left: 10px;" class="pt-1 dangxuat">Đăng xuất</div>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="navbar navbar-expand-sm bg-light border-bottom">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="" class="nav-link" style="color:#004B87;">Trang chủ</a></li>
+            <li class="nav-item"></li>
+        </ul>
+    </div>
+
+    <div class="d-flex" style="background-color: #EEF2FA; height: 100%;">
+        <div class="container-fluid border-end" style="padding-left: 0; padding-right: 0; width: 270px;">
+            <nav class="navbar bg-light">
+                <div class="container-fluid">
+                  <ul class="navbar-nav">
+                    <li class="nav-item border-bottom hvmn p-2" style="background-color: #F18903; border-radius: 5px;">
+                      <a class="nav-link" href="/web/html/trang_chu.html" style="color: #004B87;">
+                        <i class="bi bi-house item0" style="font-size: 20px; color: #EEF2FA;"></i>
+                        <span style="font-size: 17px; padding-left: 10px; color: #EEF2FA;" class="item1">Trang chủ</span>
+                      </a>
+                    </li>
+                    <li class="nav-item border-bottom hvmn p-2">
+                      <a class="nav-link" href="/web/html/quan_li_nguoi_dung.html" style="color: #004B87;">
+                        <i class="bi bi-people item0" style="font-size: 20px;"></i>
+                        <span style="font-size: 17px; padding-left: 10px;" class="item1">Quản lí người dùng</span>
+                      </a>
+                    </li>
+                    <li class="nav-item border-bottom hvmn p-2">
+                      <a class="nav-link" href="/web/html/quan_li_du_an.html" style="color: #004B87;">
+                        <i class="bi bi-database item0" style="font-size: 20px;"></i>
+                        <span style="font-size: 17px; padding-left: 10px;" class="item1">Quản lí dự án</span>
+                      </a>
+                    </li>
+                    <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/quan_li_cong_viec.html" style="color: #004B87;">
+                          <i class="bi bi-clipboard item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Quản lí công việc</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/theo_doi_tien_do.html" style="color: #004B87;">
+                          <i class="bi bi-graph-up-arrow item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Theo dõi tiến độ</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/quan_li_giao_tiep.html" style="color: #004B87;">
+                          <i class="bi bi-person-gear item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Quản lí giao tiếp</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/Lap_ke_hoach.html" style="color: #004B87;">
+                          <i class="bi bi-clipboard-plus item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Lập kế hoạch</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/quan_li_tai_lieu.html" style="color: #004B87;">
+                          <i class="bi bi-file-earmark-word item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Quản lí tài liệu</span>
+                        </a>
+                      </li>
+                      <li class="nav-item hvmn p-2">
+                        <a class="nav-link" href="/web/html/thong_bao.html" style="color: #004B87;">
+                          <i class="bi bi-bell item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Thông báo</span>
+                        </a>
+                      </li>
+                  </ul>
+                </div>
+              </nav>
+        </div>
+        <div class="container-fluid">
+            <div id="demo" class="carousel slide p-2" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button title="gotoslide1" type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                  <button title="gotoslide2" type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                  <button title="gotoslide3" type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                  <button title="gotoslide4" type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="/web/images/banner1.png" alt="" class="d-block w-100" style="height: 550px;">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/web/images/banner2.png" alt="" class="d-block w-100" style="height: 550px;">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/web/images/banner3.jpg" alt="" class="d-block w-100" style="height: 550px;">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/web/images/banner4.jpg" alt="" class="d-block w-100" style="height: 550px;">
+                  </div>
+                </div>
+                <button title="prev" class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button title="next" class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </button>
+              </div>
+        </div>
+    </div>
+    <div style="background-color: #313B48;" class="p-3 d-flex justify-content-center text-secondary">Một sản phẩm của nhóm 16</div>
+</body>
+</html>

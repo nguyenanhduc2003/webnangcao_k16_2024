@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap5/css/bootstrap.min.css">
+    <script src="/bootstrap5/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/icon/font/bootstrap-icons.min.css">
+    <script src="/jQuery/jQuery.js"></script>
+    <title>Màn hình quản lí tài liệu</title>
+    <style>
+        .menu {
+            background-color: #F18903;
+        }
+        .hvmn:hover .item0 {
+            color:#EEF2FA;
+        }
+        .hvmn:hover .item1 {
+            color:#EEF2FA;
+        }
+        .hvmn:hover {
+            background-color:#F18903;
+            border-radius: 5px;
+        }
+        .carousel-indicators [data-bs-target] {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .dropdown-item:hover .bi-box-arrow-right {
+            color: red;
+        }
+        .dropdown-item:hover .dangxuat {
+            color: red;
+        }
+        .qltl:hover {
+          background-color: #ede9e9;
+          border-top-right-radius: 40px;
+          border-bottom-right-radius: 40px;
+        }
+        .qltl:hover .qltl0 {
+          color: rgb(51, 51, 222);
+        }
+        .qltl:hover .qltl1{
+          color: rgb(235, 48, 48);
+        }
+        .thaydoimau {
+          color: rgb(51, 51, 222);
+          background-color: #ede9e9;
+          border-top-right-radius: 40px;
+          border-bottom-right-radius: 40px;
+        }
+        .qltl2 {
+          color: rgb(51, 51, 222);
+        }
+        .qltl3 {
+          color: rgb(235, 48, 48);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm menu">
+
+        <div class="container-fluid d-flex">
+            <div class="container">
+                <a href="/web/html/trang_chu.html" class="nav-link"><img src="/web/images/logo.png" alt="" style="width: 150px; height: 30px;"></a>
+            </div>
+
+            <div class="container d-flex justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link"><i class="bi bi-bell" style="font-size: 20px; padding-right: 5px; color: #004B87;"></i></a></li>
+                    <li class="nav-item"><a href="/web/html/trang_chu_dark_mode.html" class="nav-link"><i class="bi bi-moon" style="font-size: 20px; padding-right: 10px; color: #004B87;"></i></a></li>
+                </ul>
+                <div class="dropdown d-flex pt-1">
+                    <img src="/web/images/avatar.jpg" alt="" class="rounded-circle" style="width: 40px; height: 40px;">
+                    <a href="" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" style="color: #262b33; padding-left: 5px; color: #004B87;">Nguyễn Anh Đức</a>
+                    <ul class="dropdown-menu">
+                        <li><b style="color: #444444; padding-left: 10%;">Nguyễn Anh Đức</b></li>
+                        <li><h3 class="dropdown-header" style="padding-left: 25%;">Quản trị viên</h3></li>
+                        <li><a href="" class="dropdown-item border-top d-flex">
+                            <div><i class="bi bi-person" style="font-size: 20px;"></i></div>
+                            <div style="padding-left: 10px;" class="pt-1">Xem hồ sơ</div>
+                        </a></li>
+                        <li><a href="/web/html/login.html" class="dropdown-item border-top d-flex">
+                            <div><i class="bi bi-box-arrow-right" style="font-size: 20px;"></i></div>
+                            <div style="padding-left: 10px;" class="pt-1 dangxuat">Đăng xuất</div>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </nav>
+
+    <div class="navbar navbar-expand-sm bg-light border-bottom">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="" class="nav-link" style="color:#004B87;">Quản lí tài liệu</a></li>
+            <li class="nav-item"></li>
+        </ul>
+    </div>
+
+    <div class="d-flex" style="background-color: #EEF2FA; height: 100%;">
+        <div class="container-fluid border-end" style="padding-left: 0; padding-right: 0; width: 270px;">
+            <nav class="navbar bg-light">
+
+                <div class="container-fluid">
+                  <ul class="navbar-nav">
+                    <li class="nav-item border-bottom hvmn p-2">
+                      <a class="nav-link" href="/web/html/trang_chu.html" style="color: #004B87;">
+                        <i class="bi bi-house item0" style="font-size: 20px;"></i>
+                        <span style="font-size: 17px; padding-left: 10px;" class="item1">Trang chủ</span>
+                      </a>
+                    </li>
+                    <li class="nav-item border-bottom hvmn p-2">
+                      <a class="nav-link" href="/web/html/quan_li_nguoi_dung.html" style="color: #004B87;">
+                        <i class="bi bi-people item0" style="font-size: 20px;"></i>
+                        <span style="font-size: 17px; padding-left: 10px;" class="item1">Quản lí người dùng</span>
+                      </a>
+                    </li>
+                    <li class="nav-item border-bottom hvmn p-2">
+                      <a class="nav-link" href="/web/html/quan_li_du_an.html" style="color: #004B87;">
+                        <i class="bi bi-database item0" style="font-size: 20px;"></i>
+                        <span style="font-size: 17px; padding-left: 10px;" class="item1">Quản lí dự án</span>
+                      </a>
+                    </li>
+                    <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/quan_li_cong_viec.html" style="color: #004B87;">
+                          <i class="bi bi-clipboard item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Quản lí công việc</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/theo_doi_tien_do.html" style="color: #004B87;">
+                          <i class="bi bi-graph-up-arrow item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Theo dõi tiến độ</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/quan_li_giao_tiep.html" style="color: #004B87;">
+                          <i class="bi bi-person-gear item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Quản lí giao tiếp</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/Lap_ke_hoach.html" style="color: #004B87;">
+                          <i class="bi bi-clipboard-plus item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Lập kế hoạch</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2" style="background-color: #F18903; border-radius: 5px;">
+                        <a class="nav-link" href="/web/html/quan_li_tai_lieu.html" style="color: #004B87;">
+                          <i class="bi bi-file-earmark-word item0" style="font-size: 20px; color: #EEF2FA;"></i>
+                          <span style="font-size: 17px; padding-left: 10px; color: #EEF2FA;" class="item1">Quản lí tài liệu</span>
+                        </a>
+                      </li>
+                      <li class="nav-item hvmn p-2">
+                        <a class="nav-link" href="/web/html/thong_bao.html" style="color: #004B87;">
+                          <i class="bi bi-bell item0"  style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Thông báo</span>
+                        </a>
+                      </li>
+                  </ul>
+                </div>
+              
+              </nav>
+        </div>
+
+        <div class="container-fluid">
+            <div class="bg-light m-3 d-flex" style="width: 1190px; height: 540px;">
+
+              <div class="w-25 border-end border-3">
+
+                <div class="p-2" style="height: 100px;">
+                  <div class="p-2" style="height: 50px;"><i class="bi bi-clipboard-check d-flex justify-content-center" style="font-size: 30px; color: rgb(43, 43, 191);"></i></div>
+                  <div style="height: 30px;"><span class="d-flex justify-content-center" style="font-size: 20px;">Tài liệu</span></div>
+                </div>
+
+                <div style="height: 300px;">
+                  <div class="doimau h-25 bg-muted d-flex qltl dacongbo" style="width: 250px;" data-target="#dacongbo">
+                    <div><a href="" class="nav-link text-dark mt-3" style="font-size: 20px;"><i class="bi bi-clipboard qltl0 qltl2"></i><span class="qltl0 qltl2"> Đã công bố</span></a></div>
+                  </div>
+                  <div class="doimau h-25 bg-muted d-flex  qltl chuacongbo" style="width: 250px;" data-target="#chuacongbo">
+                    <div><a href="" class="nav-link text-dark mt-3" style="font-size: 20px;"><i class="bi bi-clipboard-minus qltl0 qltl2"></i><span class="qltl0 qltl2"> Chưa công bố</span></a></div>
+                  </div>
+                  <div class="doimau h-25 bg-muted d-flex  qltl tailieu" style="width: 250px;" data-target="#tailieu">
+                    <div><a href="" class="nav-link text-dark mt-3" style="font-size: 20px;"><i class="bi bi-clipboard-plus qltl0 qltl2"></i><span class="qltl0 qltl2"> Tải tài liệu lên</span></a></div>
+                  </div>
+                  <div class="doimau h-25 bg-muted d-flex  qltl thungrac" style="width: 250px;" data-target="#thungrac">
+                    <div><a href="" class="nav-link text-dark mt-3 qltl1" style="font-size: 20px;"><i class="bi bi-trash qltl1 qltl3"></i><span class="qltl1 qltl3"> Thùng rác</span></a></div>
+                  </div>
+
+                </div>
+
+                <div class="mt-5" style="height: 60px;">
+
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                      <i class="bi bi-plus"></i> Tải tài liệu
+                    </button>
+                    
+                    <div class="modal" id="myModal">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                    
+                          <div class="modal-header">
+                            <h4 class="modal-title">Tài liệu mới</h4>
+                          </div>
+                    
+                          <div class="modal-body">
+                            <div class="mb-3">
+                              <label for="title" class="form-label">Tiêu đề</label>
+                              <input type="text" class="form-control" id="title" placeholder="Nhập tiêu đề">
+                            </div>
+                            <div class="mb-3">
+                              <label for="description" class="form-label">Mô tả</label>
+                              <textarea class="form-control" id="description" rows="4" placeholder="Nhập mô tả"></textarea>
+                            </div>
+                            <div class="mb-3">
+                              <label for="imageUpload" class="form-label">Tải ảnh</label>
+                              <input class="form-control" type="file" id="imageUpload">
+                            </div>
+                          </div>
+                    
+                          <div class="modal-footer">
+                            <button type="submit" class="btn btn-success me-2" data-bs-dismiss="modal">Xác nhận</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Hủy</button>
+                          </div>
+                    
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+
+              </div>
+              <div class="w-75" style="background-color: #ede9e9;">
+                
+                <div class="p-2">
+                  <input id="searchInput" type="text" class="form-control mb-3" placeholder="Tìm kiếm...">
+                </div>
+
+                <div class="m-3">
+
+                  <div class="content-div overflow-auto" id="dacongbo" style="height: 350px; display: none;">
+                    
+                    <table id="table1" class="table table-bordered overflow-auto">
+                      <thead>
+                        <tr>
+                          <th>Tên tài liệu</th>
+                          <th>Hành động</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tableBody">
+                        <tr class="table-success" data-bs-toggle="modal" data-bs-target="#modal1">
+                          <td>Hệ Thống Mạng Máy Tính và Mạng Internet</td>
+                          <td><button class="btn btn-primary">Xem</button></td>
+                        </tr>
+                        <tr class="table-primary" data-bs-toggle="modal" data-bs-target="#modal2">
+                          <td>An Toàn Thông Tin và Bảo Mật Mạng</td>
+                          <td><button class="btn btn-primary">Xem</button></td>
+                        </tr>
+                        <tr class="table-warning" data-bs-toggle="modal" data-bs-target="#modal3">
+                          <td>Trí Tuệ Nhân Tạo và Học Máy</td>
+                          <td><button class="btn btn-primary">Xem</button></td>
+                        </tr>
+                        <tr class="table-danger" class="table-success" data-bs-toggle="modal" data-bs-target="#modal4">
+                          <td>Phát Triển Phần Mềm Agile</td>
+                          <td><button class="btn btn-primary">Xem</button></td>
+                        </tr>
+                        <tr class="table-success" data-bs-toggle="modal" data-bs-target="#modal5">
+                          <td>Điện Toán Đám Mây và Dịch Vụ Trực Tuyến</td>
+                          <td><button class="btn btn-primary">Xem</button></td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+
+                     <!-- Modal 1 -->
+                  <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modal1Label">Cấu Trúc và Ứng Dụng</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Hệ thống mạng máy tính và mạng Internet đã trở thành xương sống của mọi hoạt động truyền thông và kinh doanh hiện đại. Tài liệu này sẽ giới thiệu về cấu trúc của mạng máy tính, từ các mạng LAN, WAN đến mạng Internet. Nội dung sẽ đi sâu vào các thành phần chính như bộ định tuyến (router), bộ chuyển mạch (switch), và các thiết bị mạng khác. Phần tiếp theo sẽ mô tả các giao thức mạng quan trọng như TCP/IP, HTTP/HTTPS, và DNS. Cuối cùng, tài liệu sẽ thảo luận về ứng dụng thực tiễn của mạng Internet trong các lĩnh vực như giáo dục, y tế, và thương mại điện tử.
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
+                          <button type="button" class="btn btn-danger delete-modal" data-modal="#modal1">Xóa</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                     <!-- Modal 2 -->
+                  <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modal2Label">Cấu Trúc và Ứng Dụng</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Trong bối cảnh số hóa ngày càng phát triển, bảo mật thông tin trở thành một vấn đề cấp bách. Tài liệu này sẽ cung cấp cái nhìn tổng quan về các nguyên tắc bảo mật thông tin cơ bản, bao gồm tính bảo mật (confidentiality), tính toàn vẹn (integrity), và tính sẵn sàng (availability). Sau đó, tài liệu sẽ mô tả các phương pháp bảo mật như mã hóa dữ liệu, tường lửa (firewall), và hệ thống phát hiện xâm nhập (IDS). Cuối cùng, các chiến lược bảo vệ hệ thống khỏi các mối đe dọa như malware, ransomware, và tấn công từ chối dịch vụ (DDoS) sẽ được trình bày chi tiết.
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
+                          <button type="button" class="btn btn-danger delete-modal" data-modal="#modal2">Xóa</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                     <!-- Modal 3 -->
+                  <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modal3Label">Cấu Trúc và Ứng Dụng</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Trí tuệ nhân tạo (AI) và học máy (machine learning) đang định hình tương lai của công nghệ thông tin. Tài liệu này sẽ giới thiệu về các khái niệm cơ bản của AI, bao gồm các loại trí tuệ nhân tạo như AI hẹp, AI tổng quát, và AI siêu việt. Phần học máy sẽ được thảo luận chi tiết với các kỹ thuật như học có giám sát, học không giám sát, và học tăng cường. Các thuật toán phổ biến như cây quyết định (decision tree), mạng nơ-ron nhân tạo (neural network), và máy vector hỗ trợ (SVM) cũng sẽ được giải thích. Tài liệu sẽ kết thúc với các ứng dụng thực tiễn của AI và học máy trong các lĩnh vực như y tế, tài chính, và công nghiệp.
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
+                          <button type="button" class="btn btn-danger delete-modal" data-modal="#modal3">Xóa</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                     <!-- Modal 4 -->
+                  <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modal4Label">Cấu Trúc và Ứng Dụng</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Phương pháp Agile đã trở thành chuẩn mực trong phát triển phần mềm nhờ khả năng thích ứng nhanh và hiệu quả. Tài liệu này sẽ giới thiệu về nguyên lý và giá trị cốt lõi của Agile, bao gồm sự tương tác cá nhân, phần mềm hoạt động, hợp tác khách hàng, và phản hồi linh hoạt. Các quy trình phổ biến như Scrum, Kanban, và Extreme Programming (XP) sẽ được giải thích chi tiết. Bên cạnh đó, tài liệu sẽ đề cập đến các công cụ hỗ trợ Agile như JIRA, Trello, và Slack. Cuối cùng, các trường hợp thực tiễn triển khai Agile và bài học kinh nghiệm từ các dự án thành công sẽ được chia sẻ.
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
+                          <button type="button" class="btn btn-danger delete-modal" data-modal="#modal4">Xóa</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                     <!-- Modal 5 -->
+                  <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modal5Label">Cấu Trúc và Ứng Dụng</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Điện toán đám mây đã cách mạng hóa cách thức doanh nghiệp và cá nhân sử dụng công nghệ thông tin. Tài liệu này sẽ giải thích khái niệm cơ bản về điện toán đám mây, các mô hình triển khai như đám mây công cộng (public cloud), đám mây riêng (private cloud), và đám mây lai (hybrid cloud). Các dịch vụ chính của đám mây như IaaS, PaaS, và SaaS sẽ được mô tả chi tiết. Lợi ích của điện toán đám mây như tiết kiệm chi phí, tính linh hoạt, và khả năng mở rộng sẽ được phân tích. Tuy nhiên, các thách thức về bảo mật dữ liệu, quyền riêng tư, và quản lý dịch vụ cũng sẽ được đề cập và thảo luận.
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
+                          <button type="button" class="btn btn-danger delete-modal" data-modal="#modal5">Xóa</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  </div>
+
+                  <div class="content-div" id="chuacongbo" style="display: none;">
+                    
+                    <table id="table2" class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Tên tài liệu</th>
+                          <th>Hành động</th>
+                          <th>Công bố</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tableBody2">
+
+                        <tr class="table-success"  data-bs-toggle="modal">
+                          <td>Tiêu đề 1</td>
+                          <td data-bs-target="#modal6" data-bs-toggle="modal">
+                            <button class="btn btn-primary">Xem</button>
+                          </td>
+                          <td><button class="btn btn-success congbo">Công bố</button></td>
+                        </tr>
+
+                        <tr class="table-primary" data-bs-toggle="modal">
+                          <td>Tiêu đề 2</td>
+                          <td data-bs-toggle="modal" data-bs-target="#modal7">
+                            <button class="btn btn-primary">Xem</button>
+                          </td>
+                          <td><button class="btn btn-success congbo">Công bố</button>
+                          </td>
+                        </tr>
+                        <tr class="table-warning" data-bs-toggle="modal">
+                          <td>Tiêu đề 3</td>
+                          <td data-bs-toggle="modal" data-bs-target="#modal8">
+                            <button class="btn btn-primary">Xem</button>  
+                          </td>
+                          <td><button class="btn btn-success congbo">Công bố</button></td>
+                        </tr>
+                        <tr class="table-danger" data-bs-toggle="modal">
+                          <td>Tiêu đề 4</td>
+                          <td data-bs-toggle="modal" data-bs-target="#modal9">
+                            <button class="btn btn-primary">Xem</button> 
+                          </td>
+                          <td> <button class="btn btn-success congbo">Công bố</button></td>
+                        </tr>
+                        <tr class="table-success" data-bs-toggle="modal">
+                          <td>Tiêu đề 5</td>
+                          <td data-bs-toggle="modal" data-bs-target="#modal10">
+                            <button class="btn btn-primary">Xem</button>
+                          </td>
+                          <td><button class="btn btn-success congbo">Công bố</button></td>
+                          
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+
+                     <!-- Modal 6 -->
+                  <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modal6Label">Cấu Trúc và Ứng Dụng</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Hệ thống mạng máy tính và mạng Internet đã trở thành xương sống của mọi hoạt động truyền thông và kinh doanh hiện đại. Tài liệu này sẽ giới thiệu về cấu trúc của mạng máy tính, từ các mạng LAN, WAN đến mạng Internet. Nội dung sẽ đi sâu vào các thành phần chính như bộ định tuyến (router), bộ chuyển mạch (switch), và các thiết bị mạng khác. Phần tiếp theo sẽ mô tả các giao thức mạng quan trọng như TCP/IP, HTTP/HTTPS, và DNS. Cuối cùng, tài liệu sẽ thảo luận về ứng dụng thực tiễn của mạng Internet trong các lĩnh vực như giáo dục, y tế, và thương mại điện tử.
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                     <!-- Modal 7 -->
+                  <div class="modal fade" id="modal7" tabindex="-1" aria-labelledby="modal7Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modal7Label">Cấu Trúc và Ứng Dụng</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Hệ thống mạng máy tính và mạng Internet đã trở thành xương sống của mọi hoạt động truyền thông và kinh doanh hiện đại. Tài liệu này sẽ giới thiệu về cấu trúc của mạng máy tính, từ các mạng LAN, WAN đến mạng Internet. Nội dung sẽ đi sâu vào các thành phần chính như bộ định tuyến (router), bộ chuyển mạch (switch), và các thiết bị mạng khác. Phần tiếp theo sẽ mô tả các giao thức mạng quan trọng như TCP/IP, HTTP/HTTPS, và DNS. Cuối cùng, tài liệu sẽ thảo luận về ứng dụng thực tiễn của mạng Internet trong các lĩnh vực như giáo dục, y tế, và thương mại điện tử.
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                     <!-- Modal 8 -->
+                  <div class="modal fade" id="modal8" tabindex="-1" aria-labelledby="modal8Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modal8Label">Cấu Trúc và Ứng Dụng</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Hệ thống mạng máy tính và mạng Internet đã trở thành xương sống của mọi hoạt động truyền thông và kinh doanh hiện đại. Tài liệu này sẽ giới thiệu về cấu trúc của mạng máy tính, từ các mạng LAN, WAN đến mạng Internet. Nội dung sẽ đi sâu vào các thành phần chính như bộ định tuyến (router), bộ chuyển mạch (switch), và các thiết bị mạng khác. Phần tiếp theo sẽ mô tả các giao thức mạng quan trọng như TCP/IP, HTTP/HTTPS, và DNS. Cuối cùng, tài liệu sẽ thảo luận về ứng dụng thực tiễn của mạng Internet trong các lĩnh vực như giáo dục, y tế, và thương mại điện tử.
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                     <!-- Modal 9 -->
+                  <div class="modal fade" id="modal9" tabindex="-1" aria-labelledby="modal9Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modal9Label">Cấu Trúc và Ứng Dụng</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Hệ thống mạng máy tính và mạng Internet đã trở thành xương sống của mọi hoạt động truyền thông và kinh doanh hiện đại. Tài liệu này sẽ giới thiệu về cấu trúc của mạng máy tính, từ các mạng LAN, WAN đến mạng Internet. Nội dung sẽ đi sâu vào các thành phần chính như bộ định tuyến (router), bộ chuyển mạch (switch), và các thiết bị mạng khác. Phần tiếp theo sẽ mô tả các giao thức mạng quan trọng như TCP/IP, HTTP/HTTPS, và DNS. Cuối cùng, tài liệu sẽ thảo luận về ứng dụng thực tiễn của mạng Internet trong các lĩnh vực như giáo dục, y tế, và thương mại điện tử.
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                     <!-- Modal 10 -->
+                  <div class="modal fade" id="modal10" tabindex="-1" aria-labelledby="modal10Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modal10Label">Cấu Trúc và Ứng Dụng</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Hệ thống mạng máy tính và mạng Internet đã trở thành xương sống của mọi hoạt động truyền thông và kinh doanh hiện đại. Tài liệu này sẽ giới thiệu về cấu trúc của mạng máy tính, từ các mạng LAN, WAN đến mạng Internet. Nội dung sẽ đi sâu vào các thành phần chính như bộ định tuyến (router), bộ chuyển mạch (switch), và các thiết bị mạng khác. Phần tiếp theo sẽ mô tả các giao thức mạng quan trọng như TCP/IP, HTTP/HTTPS, và DNS. Cuối cùng, tài liệu sẽ thảo luận về ứng dụng thực tiễn của mạng Internet trong các lĩnh vực như giáo dục, y tế, và thương mại điện tử.
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  
+                  <div class="content-div" id="tailieu" style="display: none; height: 400px; border-radius: 20px;">
+                    <div class="d-flex justify-content-center" style="padding-top: 30px;">
+                      
+                      <div class="container">
+                        <div class="row justify-content-center">
+                          <div class="col-md-6">
+                            <div class="card mt-5">
+                              <div class="card-body">
+                                <h2 class="card-title text-center mb-4">Tải Tài Liệu Lên</h2>
+                                <form action="/upload" method="post" enctype="multipart/form-data">
+                                  <div class="mb-3">
+                                    <label for="content" class="form-label">Chọn nội dung từ máy tính:</label>
+                                    <input type="file" class="form-control" id="content" name="content">
+                                  </div>
+                                  <div class="d-grid">
+                                    <button type="submit" class="btn btn-success">Tải lên</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+      
+
+                  </div>
+                  <div class="content-div" id="thungrac" style="display: none;">
+                    
+                    <table id="table2" class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Tên tài liệu</th>
+                          <th>Hành động</th>
+                          <th>Hoàn tác</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tableBody2">
+
+                        <tr class="table-success"  data-bs-toggle="modal">
+                          <td>Tiêu đề 6</td>
+                          <td data-bs-target="#modal11" data-bs-toggle="modal">
+                            <button class="btn btn-primary">Xem</button>
+                          </td>
+                          <td><button class="btn btn-danger congbo">Hoàn tác</button></td>
+                        </tr>
+
+                        <tr class="table-primary" data-bs-toggle="modal">
+                          <td>Tiêu đề 7</td>
+                          <td data-bs-toggle="modal" data-bs-target="#modal12">
+                            <button class="btn btn-primary">Xem</button>
+                          </td>
+                          <td><button class="btn btn-danger congbo">Hoàn tác</button>
+                          </td>
+                        </tr>
+                        <tr class="table-warning" data-bs-toggle="modal">
+                          <td>Tiêu đề 8</td>
+                          <td data-bs-toggle="modal" data-bs-target="#modal13">
+                            <button class="btn btn-primary">Xem</button>  
+                          </td>
+                          <td><button class="btn btn-danger congbo">Hoàn tác</button></td>
+                        </tr>
+                        <tr class="table-danger" data-bs-toggle="modal">
+                          <td>Tiêu đề 9</td>
+                          <td data-bs-toggle="modal" data-bs-target="#modal14">
+                            <button class="btn btn-primary">Xem</button> 
+                          </td>
+                          <td> <button class="btn btn-danger congbo">Hoàn tác</button></td>
+                        </tr>
+                        <tr class="table-success" data-bs-toggle="modal">
+                          <td>Tiêu đề 10</td>
+                          <td data-bs-toggle="modal" data-bs-target="#modal15">
+                            <button class="btn btn-primary">Xem</button>
+                          </td>
+                          <td><button class="btn btn-danger congbo">Hoàn tác</button></td>
+                          
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+
+                     <!-- Modal 11 -->
+                  <div class="modal fade" id="modal11" tabindex="-1" aria-labelledby="modal11Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modal11Label">Cấu Trúc và Ứng Dụng</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Hệ thống mạng máy tính và mạng Internet đã trở thành xương sống của mọi hoạt động truyền thông và kinh doanh hiện đại. Tài liệu này sẽ giới thiệu về cấu trúc của mạng máy tính, từ các mạng LAN, WAN đến mạng Internet. Nội dung sẽ đi sâu vào các thành phần chính như bộ định tuyến (router), bộ chuyển mạch (switch), và các thiết bị mạng khác. Phần tiếp theo sẽ mô tả các giao thức mạng quan trọng như TCP/IP, HTTP/HTTPS, và DNS. Cuối cùng, tài liệu sẽ thảo luận về ứng dụng thực tiễn của mạng Internet trong các lĩnh vực như giáo dục, y tế, và thương mại điện tử.
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                     <!-- Modal 12 -->
+                  <div class="modal fade" id="modal12" tabindex="-1" aria-labelledby="modal12Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modal12Label">Cấu Trúc và Ứng Dụng</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Hệ thống mạng máy tính và mạng Internet đã trở thành xương sống của mọi hoạt động truyền thông và kinh doanh hiện đại. Tài liệu này sẽ giới thiệu về cấu trúc của mạng máy tính, từ các mạng LAN, WAN đến mạng Internet. Nội dung sẽ đi sâu vào các thành phần chính như bộ định tuyến (router), bộ chuyển mạch (switch), và các thiết bị mạng khác. Phần tiếp theo sẽ mô tả các giao thức mạng quan trọng như TCP/IP, HTTP/HTTPS, và DNS. Cuối cùng, tài liệu sẽ thảo luận về ứng dụng thực tiễn của mạng Internet trong các lĩnh vực như giáo dục, y tế, và thương mại điện tử.
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                     <!-- Modal 13 -->
+                  <div class="modal fade" id="modal13" tabindex="-1" aria-labelledby="modal13Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modal13Label">Cấu Trúc và Ứng Dụng</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Hệ thống mạng máy tính và mạng Internet đã trở thành xương sống của mọi hoạt động truyền thông và kinh doanh hiện đại. Tài liệu này sẽ giới thiệu về cấu trúc của mạng máy tính, từ các mạng LAN, WAN đến mạng Internet. Nội dung sẽ đi sâu vào các thành phần chính như bộ định tuyến (router), bộ chuyển mạch (switch), và các thiết bị mạng khác. Phần tiếp theo sẽ mô tả các giao thức mạng quan trọng như TCP/IP, HTTP/HTTPS, và DNS. Cuối cùng, tài liệu sẽ thảo luận về ứng dụng thực tiễn của mạng Internet trong các lĩnh vực như giáo dục, y tế, và thương mại điện tử.
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                     <!-- Modal 14 -->
+                  <div class="modal fade" id="modal14" tabindex="-1" aria-labelledby="modal14Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modal14Label">Cấu Trúc và Ứng Dụng</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Hệ thống mạng máy tính và mạng Internet đã trở thành xương sống của mọi hoạt động truyền thông và kinh doanh hiện đại. Tài liệu này sẽ giới thiệu về cấu trúc của mạng máy tính, từ các mạng LAN, WAN đến mạng Internet. Nội dung sẽ đi sâu vào các thành phần chính như bộ định tuyến (router), bộ chuyển mạch (switch), và các thiết bị mạng khác. Phần tiếp theo sẽ mô tả các giao thức mạng quan trọng như TCP/IP, HTTP/HTTPS, và DNS. Cuối cùng, tài liệu sẽ thảo luận về ứng dụng thực tiễn của mạng Internet trong các lĩnh vực như giáo dục, y tế, và thương mại điện tử.
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                     <!-- Modal 15 -->
+                  <div class="modal fade" id="modal15" tabindex="-1" aria-labelledby="modal15Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modal15Label">Cấu Trúc và Ứng Dụng</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Hệ thống mạng máy tính và mạng Internet đã trở thành xương sống của mọi hoạt động truyền thông và kinh doanh hiện đại. Tài liệu này sẽ giới thiệu về cấu trúc của mạng máy tính, từ các mạng LAN, WAN đến mạng Internet. Nội dung sẽ đi sâu vào các thành phần chính như bộ định tuyến (router), bộ chuyển mạch (switch), và các thiết bị mạng khác. Phần tiếp theo sẽ mô tả các giao thức mạng quan trọng như TCP/IP, HTTP/HTTPS, và DNS. Cuối cùng, tài liệu sẽ thảo luận về ứng dụng thực tiễn của mạng Internet trong các lĩnh vực như giáo dục, y tế, và thương mại điện tử.
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  </div>
+    
+                </div>
+
+              </div>
+            </div>
+        </div>
+        </div>
+    <!--footer-->
+    <div style="background-color: #313B48;" class="p-3 d-flex justify-content-center text-secondary">Một sản phẩm của nhóm 16</div>
+</body>
+
+<script>
+
+$(document).ready(function() {
+      $('.qltl a').click(function(event) {
+        event.preventDefault(); 
+        var target = $(this).closest('.qltl').data('target');
+        $('.content-div').hide(); 
+        $(target).show(); 
+      });
+    });
+
+$(document).ready(function() {
+      $("#searchInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#tableBody tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+
+    $(document).ready(function() {
+      $('.delete-modal').click(function() {
+        var modalId = $(this).data('modal');
+        var confirmation = confirm('Bạn có chắc chắn muốn xóa không?');
+        if (confirmation) {
+          $(modalId).modal('hide'); // Ẩn modal trước khi xóa
+          $(modalId).on('hidden.bs.modal', function() {
+            $(this).remove(); // Xóa modal khỏi DOM
+            // Xóa hàng liên quan khỏi bảng
+            $('tr[data-bs-target="' + modalId + '"]').remove();
+          });
+        }
+      });
+    });
+
+    $(document).ready(function() {
+      // Xử lý sự kiện khi nhấp vào nút "công bố"
+      $('.congbo').on('click', function() {
+        var row = $(this).closest('tr'); // Chọn hàng gần nhất với nút được nhấp
+        var tableBody = $('#table1 tbody');
+        
+        row.clone().appendTo(tableBody);
+
+        row.remove();
+
+        $('#table1 th:nth-child(3), #table1 td:nth-child(3)').remove();
+      });
+    });
+
+    $(document).ready(function() {
+      // Xóa thanh tìm kiếm khi chuyển sang tab "Tải tài liệu lên"
+      $('.tailieu').on('click', function() {
+        $('#searchInput').hide();
+      });
+    });
+
+    $(document).ready(function() {
+      // Xóa thanh tìm kiếm khi chuyển sang tab "Tải tài liệu lên"
+      $('.dacongbo, .chuacongbo, .thungrac').on('click', function() {
+        $('#searchInput').show();
+      });
+    });
+
+    $(document).ready(function(){
+            $(".doimau").click(function(){
+                $(".doimau").removeClass("thaydoimau"); 
+                $(this).addClass("thaydoimau"); 
+            });
+        });
+
+    $(document).ready(function(){
+            $(".doimau").click(function(){
+                $(".doimau").removeClass("qltl2"); 
+                $(this).addClass("qltl2"); 
+            });
+        });
+
+    $(document).ready(function(){
+            $(".doimau").click(function(){
+                $(".doimau").removeClass("qltl3"); 
+                $(this).addClass("qltl3"); 
+            });
+        });
+    </script>
+
+</script>
+</html>

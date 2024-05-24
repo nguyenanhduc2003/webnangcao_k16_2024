@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/bootstrap5/css/bootstrap.min.css">
+  <script src="/bootstrap5/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="/icon/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/bootstrap5/css/bootstrap-datepicker.min.css">
+  <script src="/jQuery/jQuery.js"></script>
+  <script src="/bootstrap5/js/bootstrap-datepicker.min.js"></script>
+    <title>Màn hình xem kế hoạch</title>
+    <style>
+        .menu {
+            background-color: #F18903;
+        }
+        .hvmn:hover .item0 {
+            color:#EEF2FA;
+        }
+        .hvmn:hover .item1 {
+            color:#EEF2FA;
+        }
+        .hvmn:hover {
+            background-color:#F18903;
+            border-radius: 5px;
+        }
+        .carousel-indicators [data-bs-target] {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .dropdown-item:hover .bi-box-arrow-right {
+            color: red;
+        }
+        .dropdown-item:hover .dangxuat {
+            color: red;
+        }
+        .tinnhan:hover {
+          background-color: #d1d4d7;
+        }
+        .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .delete-icon {
+    color: red;
+    cursor: pointer;
+  }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm menu">
+
+        <div class="container-fluid d-flex">
+            <div class="container">
+                <a href="/web/html/trang_chu.html" class="nav-link"><img src="/web/images/logo.png" alt="" style="width: 150px; height: 30px;"></a>
+            </div>
+
+            <div class="container d-flex justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link"><i class="bi bi-bell" style="font-size: 20px; padding-right: 5px; color: #004B87;"></i></a></li>
+                    <li class="nav-item"><a href="/web/html/trang_chu_dark_mode.html" class="nav-link"><i class="bi bi-moon" style="font-size: 20px; padding-right: 10px; color: #004B87;"></i></a></li>
+                </ul>
+                <div class="dropdown d-flex pt-1">
+                    <img src="/web/images/avatar.jpg" alt="" class="rounded-circle" style="width: 40px; height: 40px;">
+                    <a href="" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" style="color: #262b33; padding-left: 5px; color: #004B87;">Nguyễn Anh Đức</a>
+                    <ul class="dropdown-menu">
+                        <li><b style="color: #444444; padding-left: 10%;">Nguyễn Anh Đức</b></li>
+                        <li><h3 class="dropdown-header" style="padding-left: 25%;">Nhân viên</h3></li>
+                        <li><a href="" class="dropdown-item border-top d-flex">
+                            <div><i class="bi bi-person" style="font-size: 20px;"></i></div>
+                            <div style="padding-left: 10px;" class="pt-1">Xem hồ sơ</div>
+                        </a></li>
+                        <li><a href="/web/html/login.html" class="dropdown-item border-top d-flex">
+                            <div><i class="bi bi-box-arrow-right" style="font-size: 20px;"></i></div>
+                            <div style="padding-left: 10px;" class="pt-1 dangxuat">Đăng xuất</div>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </nav>
+
+    <div class="navbar navbar-expand-sm bg-light border-bottom">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="" class="nav-link" style="color:#004B87;">Xem kế hoạch</a></li>
+            <li class="nav-item"></li>
+        </ul>
+    </div>
+
+    <div class="d-flex" style="background-color: #EEF2FA; height: 100%;">
+        <div class="container-fluid border-end" style="padding-left: 0; padding-right: 0; width: 20%;">
+            <nav class="navbar bg-light">
+
+                <div class="container-fluid">
+                  <ul class="navbar-nav">
+                    <li class="nav-item border-bottom hvmn p-2">
+                      <a class="nav-link" href="/web/html/trang_chu_nv.html" style="color: #004B87;">
+                        <i class="bi bi-house item0" style="font-size: 20px;"></i>
+                        <span style="font-size: 17px; padding-left: 10px;" class="item1">Trang chủ</span>
+                      </a>
+                    </li>
+                    <li class="nav-item border-bottom hvmn p-2">
+                      <a class="nav-link" href="/web/html/Xem_du_an.html" style="color: #004B87;">
+                        <i class="bi bi-database item0" style="font-size: 20px;"></i>
+                        <span style="font-size: 17px; padding-left: 10px;" class="item1">Xem dự án</span>
+                      </a>
+                    </li>
+                    <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/xem_cong_viec.html" style="color: #004B87;">
+                          <i class="bi bi-clipboard item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Xem công việc</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/theo_doi_tien_do_nv.html" style="color: #004B87;">
+                          <i class="bi bi-graph-up-arrow item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Theo dõi tiến độ</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/thao_luan.html" style="color: #004B87;">
+                          <i class="bi bi-person-gear item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Thảo luận</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2" style="background-color: #F18903; border-radius: 5px;">
+                        <a class="nav-link" href="/web/html/xem_ke_hoach.html" style="color: #004B87;">
+                          <i class="bi bi-clipboard-plus item0" style="font-size: 20px; color: #EEF2FA;"></i>
+                          <span style="font-size: 17px; padding-left: 10px; color: #EEF2FA;" class="item1">Xem kế hoạch</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/xem_tai_lieu.html" style="color: #004B87;">
+                          <i class="bi bi-file-earmark-word item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Xem tài liệu</span>
+                        </a>
+                      </li>
+                      <li class="nav-item hvmn p-2">
+                        <a class="nav-link" href="/web/html/xem_thong_bao.html" style="color: #004B87;">
+                          <i class="bi bi-bell item0"  style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Xem thông báo</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/cap_nhat_thong_tin.html" style="color: #004B87;">
+                          <i class="bi bi-people item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Cập nhật thông tin</span>
+                        </a>
+                      </li>
+                  </ul>
+                </div>
+              
+              </nav>
+        </div>
+
+        <div class="container-fluid">
+          <div class="container-fluid">
+            <!--tạo công việc-->
+       
+  
+          <div class="bg-light mt-4 rounded d-flex" style="margin-left: 30px; margin-right: 30px;">
+            <!--tên nhóm-->
+            <div class="rounded boder-end h-100" style="width: 250px;">
+              <div class="p-2"><h4 style="color: #004B87;">Đoạn chat</h4></div>
+  
+              <div class="container mt-3">
+                <input type="text" id="searchInput" class="form-control mb-3" placeholder="Nhập tên để tìm kiếm">
+              
+                <ul class="list-group" id="resultList">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                      <img src="/web/images/banner4.jpg" class="avatar me-3" alt="Avatar 2">
+                      <span class="name">Nhóm 1</span>
+                    </div>
+       
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                      <img src="/web/images/banner4.jpg" class="avatar me-3" alt="Avatar 3">
+                      <span class="name">Nhóm 2</span>
+                    </div>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                      <img src="/web/images/banner4.jpg" class="avatar me-3" alt="Avatar 4">
+                      <span class="name">Nhóm 3</span>
+                    </div>
+
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                      <img src="/web/images/banner4.jpg" class="avatar me-3" alt="Avatar 5">
+                      <span class="name">Nhóm 4</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              
+  
+            </div>
+            <!--đoạn chat-->
+             <!--thảo luận về dự án-->
+             <div class="rounded container-fluid" style="background-color: #99c5f0;">
+
+              <div class="d-flex">
+                <!---->
+                <div class="m-2" style="height: 450px; width: 550px;">
+                  <div class="m-3">
+                    <button type="button" class="btn btn-success">Kế hoạch 1</button>
+                  </div>
+                  <div class="h-75 m-3 overflow-auto rounded" style="background-color: #e6e6e1; width: 500px;">
+                    <!--nội dung-->
+                    <div class="m-3">
+                      Dự án: Phát triển ứng dụng di động mới
+Mục tiêu:
+Xây dựng một ứng dụng di động đa nền tảng (iOS và Android) cho việc quản lý công việc cá nhân.
+Cung cấp giao diện người dùng thân thiện, dễ sử dụng và hiệu quả.
+Tích hợp tính năng đồng bộ hóa dữ liệu giữa các thiết bị và đám mây.
+Phạm vi:
+Phân tích yêu cầu: Thu thập yêu cầu từ khách hàng và người dùng, đặc tả chức năng và yêu cầu thiết kế.
+Thiết kế: Thiết kế giao diện người dùng, cấu trúc cơ sở dữ liệu và các tính năng chính của ứng dụng.
+Phát triển: Lập trình, kiểm thử và triển khai ứng dụng trên cả hai nền tảng iOS và Android.
+Kiểm thử: Kiểm tra và debug ứng dụng để đảm bảo tính ổn định và chất lượng.
+Triển khai: Phát hành ứng dụng trên các cửa hàng ứng dụng (App Store và Google Play).
+Hỗ trợ: Cung cấp hỗ trợ và bảo trì sau khi ứng dụng được triển khai.
+Thời gian:
+Phân tích yêu cầu: 2 tuần (1/6/2024 - 14/6/2024)
+Thiết kế: 3 tuần (15/6/2024 - 5/7/2024)
+Phát triển: 8 tuần (6/7/2024 - 30/8/2024)
+Kiểm thử: 2 tuần (1/9/2024 - 14/9/2024)
+Triển khai: 1 tuần (15/9/2024 - 21/9/2024)
+Hỗ trợ: Liên tục sau khi triển khai.
+Nguồn lực:
+Nhóm phát triển ứng dụng di động: 5 nhân viên (2 lập trình viên iOS, 2 lập trình viên Android, 1 kiểm thử viên).
+Người quản lý dự án: 1 người.
+Ngân sách: Ước tính 100,000 USD cho toàn bộ dự án.
+                    </div>
+                  </div>
+                </div>
+                <!---->
+                <div class="m-2 overflow-auto">
+                  <!--người tham gia-->
+                  <div class="m-3" style="padding-left: 20px;"><button type="button" class="btn btn-outline-success">Người tham gia</button></div>
+                  <div> <!--tên -->
+                    <table class="table table-hover">
+                      <thead>
+                        <tr style="margin-left: 10px;">
+                          <th>Họ và tên</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody class="overflow-auto" style="height: 200px;">
+                        <tr class="table-success">
+                          <td><img src="/web/images/tranthia.jpeg" alt="" style="width: 40px; height: 40px; border-radius: 50%;">
+                            Trần Thị A</td>
+                         
+                        </tr>      
+                        <tr class="table-secondary">
+                          <td><img src="/web/images/nguyenvanb.jpeg" alt="" style="width: 40px; height: 40px; border-radius: 50%;">
+                            Nguyễn Văn B</td>
+                          
+                        </tr>      
+                        <tr class="table-info">
+                          <td><img src="/web/images/phamthic.jpeg" alt="" style="width: 40px; height: 40px; border-radius: 50%;">
+                            Phạm Thị C</td>
+                          
+                        </tr>      
+                        <tr class="table-danger">
+                          <td><img src="/web/images/luuquangd.jpeg" alt="" style="width: 40px; height: 40px; border-radius: 50%;">
+                            Lưu Quang D</td>
+                          
+                        </tr>      
+                        </tbody>
+                        </table>
+                    </div>
+                   </div>
+                </div>
+              </div>
+
+             </div>
+
+            <div>
+            </div>
+          </div>
+          </div>
+        </div>
+        </div>
+    <!--footer-->
+    <div class="p-3 d-flex justify-content-center text-secondary" style="background-color: #313B48;">Một sản phẩm của nhóm 16</div>
+</body>
+
+  <script>
+    $(document).ready(function() {
+                $("#deleteRowsBtn").click(function() {
+                    $("table tbody tr").remove();
+                });
+            });
+
+    $(document).ready(function() {
+        $(".deleteRow").click(function() {
+            $(this).closest("tr").remove();
+        });
+    });
+
+    $(document).ready(function() {
+                $(".deleteRow").click(function() {
+                    $(this).closest("li").remove();
+                });
+            });
+ 
+  </script>
+</html>

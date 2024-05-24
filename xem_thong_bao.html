@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap5/css/bootstrap.min.css">
+    <script src="/bootstrap5/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/icon/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/bootstrap5/css/bootstrap-datepicker.min.css">
+    <script src="/jQuery/jQuery.js"></script>
+    <script src="/bootstrap5/js/bootstrap-datepicker.min.js"></script>
+    <title>Màn hình xem thông báo</title>
+    <style>
+        .menu {
+            background-color: #F18903;
+        }
+        .hvmn:hover .item0 {
+            color:#EEF2FA;
+        }
+        .hvmn:hover .item1 {
+            color:#EEF2FA;
+        }
+        .hvmn:hover {
+            background-color:#F18903;
+            border-radius: 5px;
+        }
+        .carousel-indicators [data-bs-target] {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .dropdown-item:hover .bi-box-arrow-right {
+            color: red;
+        }
+        .dropdown-item:hover .dangxuat {
+            color: red;
+        }
+        .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    .email {
+      color: blue;
+    }
+    .list-group-item {
+      padding: 20px;
+      font-size: 1.2em;
+    }
+    .card-title {
+      font-size: 1.5em;
+    }
+    .card-subtitle {
+      font-size: 1.2em;
+    }
+    .delete-btn {
+      cursor: pointer;
+      color: red;
+      font-weight: bold;
+      float: right;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm menu">
+
+        <div class="container-fluid d-flex">
+            <div class="container">
+                <a href="/web/html/trang_chu.html" class="nav-link"><img src="/web/images/logo.png" alt="" style="width: 150px; height: 30px;"></a>
+            </div>
+
+            <div class="container d-flex justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link"><i class="bi bi-bell" style="font-size: 20px; padding-right: 5px; color: #004B87;"></i></a></li>
+                    <li class="nav-item"><a href="/web/html/trang_chu_dark_mode.html" class="nav-link"><i class="bi bi-moon" style="font-size: 20px; padding-right: 10px; color: #004B87;"></i></a></li>
+                </ul>
+                <div class="dropdown d-flex pt-1">
+                    <img src="/web/images/avatar.jpg" alt="" class="rounded-circle" style="width: 40px; height: 40px;">
+                    <a href="" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" style="color: #262b33; padding-left: 5px; color: #004B87;">Nguyễn Anh Đức</a>
+                    <ul class="dropdown-menu">
+                        <li><b style="color: #444444; padding-left: 10%;">Nguyễn Anh Đức</b></li>
+                        <li><h3 class="dropdown-header" style="padding-left: 25%;">Nhân viên</h3></li>
+                        <li><a href="" class="dropdown-item border-top d-flex">
+                            <div><i class="bi bi-person" style="font-size: 20px;"></i></div>
+                            <div style="padding-left: 10px;" class="pt-1">Xem hồ sơ</div>
+                        </a></li>
+                        <li><a href="/web/html/login.html" class="dropdown-item border-top d-flex">
+                            <div><i class="bi bi-box-arrow-right" style="font-size: 20px;"></i></div>
+                            <div style="padding-left: 10px;" class="pt-1 dangxuat">Đăng xuất</div>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </nav>
+
+    <div class="navbar navbar-expand-sm bg-light border-bottom">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="" class="nav-link" style="color:#004B87;">Xem thông báo</a></li>
+            <li class="nav-item"></li>
+        </ul>
+    </div>
+
+    <div class="d-flex" style="background-color: #EEF2FA; height: 100%;">
+        <div class="container-fluid border-end" style="padding-left: 0; padding-right: 0; width: 20%;">
+            <nav class="navbar bg-light">
+
+                <div class="container-fluid">
+                  <ul class="navbar-nav">
+                    <li class="nav-item border-bottom hvmn p-2">
+                      <a class="nav-link" href="/web/html/trang_chu_nv.html" style="color: #004B87;">
+                        <i class="bi bi-house item0" style="font-size: 20px;"></i>
+                        <span style="font-size: 17px; padding-left: 10px;" class="item1">Trang chủ</span>
+                      </a>
+                    </li>
+                    <li class="nav-item border-bottom hvmn p-2">
+                      <a class="nav-link" href="/web/html/Xem_du_an.html" style="color: #004B87;">
+                        <i class="bi bi-database item0" style="font-size: 20px;"></i>
+                        <span style="font-size: 17px; padding-left: 10px;" class="item1">Xem dự án</span>
+                      </a>
+                    </li>
+                    <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/xem_cong_viec.html" style="color: #004B87;">
+                          <i class="bi bi-clipboard item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Xem công việc</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/theo_doi_tien_do_nv.html" style="color: #004B87;">
+                          <i class="bi bi-graph-up-arrow item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Theo dõi tiến độ</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/thao_luan.html" style="color: #004B87;">
+                          <i class="bi bi-person-gear item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Thảo luận</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/xem_ke_hoach.html" style="color: #004B87;">
+                          <i class="bi bi-clipboard-plus item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Xem kế hoạch</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/xem_tai_lieu.html" style="color: #004B87;">
+                          <i class="bi bi-file-earmark-word item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Xem tài liệu</span>
+                        </a>
+                      </li>
+                      <li class="nav-item hvmn p-2" style="background-color: #F18903; border-radius: 5px;">
+                        <a class="nav-link" href="/web/html/xem_thong_bao.html" style="color: #004B87;">
+                          <i class="bi bi-bell item0"  style="font-size: 20px; color: #EEF2FA;"></i>
+                          <span style="font-size: 17px; padding-left: 10px; color: #EEF2FA;" class="item1">Xem thông báo</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/cap_nhat_thong_tin.html" style="color: #004B87;">
+                          <i class="bi bi-people item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Cập nhật thông tin</span>
+                        </a>
+                      </li>
+                  </ul>
+                </div>
+              
+              </nav>
+        </div>
+
+        <div class="container-fluid"> 
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Thông báo</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Hồ sơ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Cài đặt</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Tìm kiếm</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        
+          <div class="container mt-4">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="list-group" id="list-tab" role="tablist">
+                  <a class="list-group-item list-group-item-action unread" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Thông báo 1 <span class="delete-btn" onclick="deleteNotification('list-home')">&times;</span></a>
+                  <a class="list-group-item list-group-item-action read" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Thông báo 2 <span class="delete-btn" onclick="deleteNotification('list-profile')">&times;</span></a>
+                  <a class="list-group-item list-group-item-action unread" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">Thông báo 3 <span class="delete-btn" onclick="deleteNotification('list-messages')">&times;</span></a>
+                  <a class="list-group-item list-group-item-action read" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">Thông báo 4 <span class="delete-btn" onclick="deleteNotification('list-settings')">&times;</span></a>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active notification-unread" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Thông báo 1</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Gửi từ: tranthia@example.com</h6>
+                        <p class="card-text">Nội dung thông báo 1.</p>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="read1">
+                          <label class="form-check-label" for="read1">
+                            Đánh dấu là đã đọc
+                          </label>
+                        </div>
+                        <span class="delete-btn" onclick="deleteNotification('list-home')">Xóa</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade notification-read" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Thông báo 2</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Gửi từ: tranthia@example.com</h6>
+                        <p class="card-text">Nội dung thông báo 2.</p>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="read2" checked>
+                          <label class="form-check-label" for="read2">
+                            Đánh dấu là đã đọc
+                          </label>
+                        </div>
+                        <span class="delete-btn" onclick="deleteNotification('list-profile')">Xóa</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade notification-unread" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Thông báo 3</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Gửi từ: tranthia@example.com</h6>
+                        <p class="card-text">Nội dung thông báo 3.</p>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="read3">
+                          <label class="form-check-label" for="read3">
+                            Đánh dấu là đã đọc
+                          </label>
+                        </div>
+                        <span class="delete-btn" onclick="deleteNotification('list-messages')">Xóa</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade notification-read" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Thông báo 4</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Gửi từ: tranthia@example.com</h6>
+                        <p class="card-text">Nội dung thông báo 4.</p>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="read4" checked>
+                          <label class="form-check-label" for="read4">
+                            Đánh dấu là đã đọc
+                          </label>
+                        </div>
+                        <span class="delete-btn" onclick="deleteNotification('list-settings')">Xóa</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    <!--footer-->
+    <div style="background-color: #313B48;" class="p-3 d-flex justify-content-center text-secondary">Một sản phẩm của nhóm 16</div>
+
+</body>
+
+      <script>
+
+          $(document).ready(function() {
+            $('#searchInput').on('keyup', function() {
+              var input = $(this).val().toLowerCase();
+              $('#tableBody tbody tr').filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(input) > -1);
+              });
+            });
+          });
+
+          $(document).ready(function(){
+            $('#tb_guithongbao').click(function(){
+              alert("Gửi thông báo thành công");
+            })
+          })
+
+          $(document).ready(function () {
+    var startDateInput = $('#startDate');
+    var endDateInput = $('#endDate');
+
+    startDateInput.datepicker({
+        format: 'dd/mm/yyyy',
+        autoclose: true,
+        todayHighlight: true
+    });
+
+    endDateInput.datepicker({
+        format: 'dd/mm/yyyy',
+        autoclose: true,
+        todayHighlight: true
+    });
+
+    $('#startDateIcon').click(function() {
+        startDateInput.datepicker('show');
+    });
+
+    $('#endDateIcon').click(function() {
+        endDateInput.datepicker('show');
+    });
+
+    startDateInput.on('changeDate', function (selected) {
+        var startDate = new Date(selected.date.valueOf());
+        endDateInput.datepicker('setStartDate', startDate);
+        if (endDateInput.val() && new Date(endDateInput.val()) < startDate) {
+            endDateInput.val('');
+        }
+    });
+
+    endDateInput.on('changeDate', function (selected) {
+        var endDate = new Date(selected.date.valueOf());
+        startDateInput.datepicker('setEndDate', endDate);
+    });
+});
+
+
+    function deleteNotification(id) {
+
+      var listItem = document.getElementById(id + '-list');
+      listItem.parentNode.removeChild(listItem);
+
+
+      var contentItem = document.getElementById(id);
+      contentItem.parentNode.removeChild(contentItem);
+    }
+
+
+</script>
+
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap5/css/bootstrap.min.css">
+    <script src="/bootstrap5/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/icon/font/bootstrap-icons.min.css">
+    <title>Màn hình theo dõi tiến độ</title>
+    <style>
+        .menu {
+            background-color: #F18903;
+        }
+        .hvmn:hover .item0 {
+            color:#EEF2FA;
+        }
+        .hvmn:hover .item1 {
+            color:#EEF2FA;
+        }
+        .hvmn:hover {
+            background-color:#F18903;
+            border-radius: 5px;
+        }
+        .carousel-indicators [data-bs-target] {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .dropdown-item:hover .bi-box-arrow-right {
+            color: red;
+        }
+        .dropdown-item:hover .dangxuat {
+            color: red;
+        }
+        .a_xemduan:hover .icontailieu{
+          color: red;
+        }
+        .a_xemduan:hover:hover .xemduan{
+          color: red;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm menu">
+
+        <div class="container-fluid d-flex">
+            <div class="container">
+                <a href="/web/html/trang_chu.html" class="nav-link"><img src="/web/images/logo.png" alt="" style="width: 150px; height: 30px;"></a>
+            </div>
+
+            <div class="container d-flex justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link"><i class="bi bi-bell" style="font-size: 20px; padding-right: 5px; color: #004B87;"></i></a></li>
+                    <li class="nav-item"><a href="/web/html/trang_chu_dark_mode.html" class="nav-link"><i class="bi bi-moon" style="font-size: 20px; padding-right: 10px; color: #004B87;"></i></a></li>
+                </ul>
+                <div class="dropdown d-flex pt-1">
+                    <img src="/web/images/avatar.jpg" alt="" class="rounded-circle" style="width: 40px; height: 40px;">
+                    <a href="" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" style="color: #262b33; padding-left: 5px; color: #004B87;">Nguyễn Anh Đức</a>
+                    <ul class="dropdown-menu">
+                        <li><b style="color: #444444; padding-left: 10%;">Nguyễn Anh Đức</b></li>
+                        <li><h3 class="dropdown-header" style="padding-left: 25%;">Quản trị viên</h3></li>
+                        <li><a href="" class="dropdown-item border-top d-flex">
+                            <div><i class="bi bi-person" style="font-size: 20px;"></i></div>
+                            <div style="padding-left: 10px;" class="pt-1">Xem hồ sơ</div>
+                        </a></li>
+                        <li><a href="/web/html/login.html" class="dropdown-item border-top d-flex">
+                            <div><i class="bi bi-box-arrow-right" style="font-size: 20px;"></i></div>
+                            <div style="padding-left: 10px;" class="pt-1 dangxuat">Đăng xuất</div>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </nav>
+
+    <div class="navbar navbar-expand-sm bg-light border-bottom">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="" class="nav-link" style="color:#004B87;">Theo dõi tiến độ</a></li>
+            <li class="nav-item"></li>
+        </ul>
+    </div>
+
+    <div class="d-flex" style="background-color: #EEF2FA; height: 100%;">
+        <div class="container-fluid border-end" style="padding-left: 0; padding-right: 0; width: 270px;">
+            <nav class="navbar bg-light">
+
+                <div class="container-fluid">
+                  <ul class="navbar-nav">
+                    <li class="nav-item border-bottom hvmn p-2">
+                      <a class="nav-link" href="/web/html/trang_chu.html" style="color: #004B87;">
+                        <i class="bi bi-house item0" style="font-size: 20px;"></i>
+                        <span style="font-size: 17px; padding-left: 10px;" class="item1">Trang chủ</span>
+                      </a>
+                    </li>
+                    <li class="nav-item border-bottom hvmn p-2">
+                      <a class="nav-link" href="/web/html/quan_li_nguoi_dung.html" style="color: #004B87;">
+                        <i class="bi bi-people item0" style="font-size: 20px;"></i>
+                        <span style="font-size: 17px; padding-left: 10px;" class="item1">Quản lí người dùng</span>
+                      </a>
+                    </li>
+                    <li class="nav-item border-bottom hvmn p-2">
+                      <a class="nav-link" href="/web/html/quan_li_du_an.html" style="color: #004B87;">
+                        <i class="bi bi-database item0" style="font-size: 20px;"></i>
+                        <span style="font-size: 17px; padding-left: 10px;" class="item1">Quản lí dự án</span>
+                      </a>
+                    </li>
+                    <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/quan_li_cong_viec.html" style="color: #004B87;">
+                          <i class="bi bi-clipboard item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Quản lí công việc</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2" style="background-color: #F18903; border-radius: 5px;">
+                        <a class="nav-link" href="/web/html/theo_doi_tien_do.html" style="color: #004B87;">
+                          <i class="bi bi-graph-up-arrow item0" style="font-size: 20px; color: #EEF2FA;"></i>
+                          <span style="font-size: 17px; padding-left: 10px; color: #EEF2FA;" class="item1">Theo dõi tiến độ</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/quan_li_giao_tiep.html" style="color: #004B87;">
+                          <i class="bi bi-person-gear item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Quản lí giao tiếp</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/Lap_ke_hoach.html" style="color: #004B87;">
+                          <i class="bi bi-clipboard-plus item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Lập kế hoạch</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/quan_li_tai_lieu.html" style="color: #004B87;">
+                          <i class="bi bi-file-earmark-word item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Quản lí tài liệu</span>
+                        </a>
+                      </li>
+                      <li class="nav-item hvmn p-2">
+                        <a class="nav-link" href="/web/html/thong_bao.html" style="color: #004B87;">
+                          <i class="bi bi-bell item0"  style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Thông báo</span>
+                        </a>
+                      </li>
+                  </ul>
+                </div>
+              
+              </nav>
+        </div>
+
+        <div class="container-fluid">
+          <!--div trên-->
+            <div class="container-fluid d-flex">
+              <div class="mt-4" style="padding-left: 10px;"><!--nút chuyển trang-->
+                <!-- pagination -->
+              <div style="height: 30px;"> 
+                <button type="button" class="btn btn-primary">&lt;</button>
+                <button type="button" class="btn btn-primary">></button>
+              </div>
+              </div>
+              <div class="mt-4" style="padding-left: 15px;">
+                <button type="button" class="btn btn-outline-primary">Hôm nay</button>
+              </div>
+              <div><!--thay đổi dự án-->
+                <!--div dropdown-->
+            <div class="dropdown d-flex mt-4" style="padding-left: 15px;">
+              <a href="" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" style="color: #262b33; padding-left: 5px; color: #004B87;">Dự án số 1</a>
+              <ul class="dropdown-menu">
+                  <li><a href="" class="dropdown-item border-top d-flex a_xemduan">
+                      <div><i class="bi bi-file-earmark-word icontailieu" style="font-size: 20px;"></i></div>
+                      <div style="padding-left: 10px;" class="pt-1 xemduan">Xem dự án số 2</div>
+                  </a>
+                </li>
+                  <li><a href="" class="dropdown-item border-top d-flex a_xemduan">
+                      <div><i class="bi bi-file-earmark-word icontailieu" style="font-size: 20px;"></i></div>
+                      <div style="padding-left: 10px;" class="pt-1 xemduan">Xem dự án số 3</div>
+                  </a>
+                </li>
+                  <li><a href="" class="dropdown-item border-top d-flex a_xemduan">
+                      <div><i class="bi bi-file-earmark-word icontailieu" style="font-size: 20px;"></i></div>
+                      <div style="padding-left: 10px;" class="pt-1 xemduan">Xem dự án số 4</div>
+                  </a>
+                </li>
+              </ul>
+          </div>
+            <!--kết thúc dropdown-->
+              </div>
+              <div class="mt-4" style="padding-left: 20px;"><!--tháng 6 năm 2024-->
+                <h3 style="color: #F18903;">Tháng 6 năm 2024</h3>
+              </div>
+              <div class="mt-2" style="margin-left: 100px;"><!--chú thích -->
+                <div class="d-flex">
+                  <div class="badge bg-primary">Hôm nay</div>
+                  <div class="badge bg-success" style="margin-left: 10px;">Đã hoàn thành</div>
+                </div>
+                <div class="d-flex mt-1">
+                  <div class="badge bg-info">Đang tiến hành</div>
+                  <div class="badge bg-secondary" style="margin-left: 10px;">Chưa bắt đầu</div>
+                </div>
+                <div class="d-flex mt-1">
+                  <div class="badge bg-danger">Quá hạn</div>
+                </div>
+              </div>
+            </div>
+            <!--div dưới-->
+            <div class="bg-dark mt-4 overflow-auto" style="margin-left: 20px; margin-right: 20px; height: 470px;"><!--lịch-->
+              <ul class="list-group list-group-horizontal row">
+                <li class="list-group-item col d-flex justify-content-center"><b>Thứ hai</b></li>
+                <li class="list-group-item col d-flex justify-content-center"><b>Thức ba</b></li>
+                <li class="list-group-item col d-flex justify-content-center"><b>Thứ tư</b></li>
+                <li class="list-group-item col d-flex justify-content-center"><b>Thứ năm</b></li>
+                <li class="list-group-item col d-flex justify-content-center"><b>Thứ sáu</b></li>
+                <li class="list-group-item col d-flex justify-content-center"><b>Thứ bảy</b></li>
+                <li class="list-group-item col d-flex justify-content-center"><b>Chủ nhật</b></li>
+              </ul>
+              <div>
+                <ul class="list-group list-group-horizontal row">
+                  <li class="list-group-item col d-flex justify-content-end text-secondary" style="height: 100px;">29</li>
+                  <li class="list-group-item col d-flex justify-content-end text-secondary" style="height: 100px;">30</li>
+                  <li class="list-group-item col " style="height: 100px;">
+                    <div>
+                      <div class="d-flex justify-content-end">1</div>
+                      <div class="badge bg-success">Họp nội bộ</div>
+                      <div class="badge bg-info">Phân tích yêu cầu <br> (dự án 1)</div>
+                    </div>
+                  </li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">2</li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">
+                    <div>
+                      <div class="d-flex justify-content-end">3</div>
+                      <div class="badge bg-info">Phân tích yêu cầu <br> (dự án 2)</div>
+                    </div>
+                  </li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">4</li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">5</li>
+                </ul>
+                <ul class="list-group list-group-horizontal row">
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">6</li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">7</li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">8</li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">9</li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">10</li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">11</li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">12</li>
+                </ul>
+                <ul class="list-group list-group-horizontal row">
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">13</li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">14</li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">
+                    <div>
+                      <div class="d-flex justify-content-end">15</div>
+                      <div class="badge bg-success">Phân tích yêu cầu <br> (dự án 1)</div>
+                    </div>
+                  </li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">
+                    <div>
+                      <div class="d-flex justify-content-end">16</div>
+                      <div class="badge bg-primary">Hôm nay</div>
+                      <div class="badge bg-info">Thiết kế hệ thống <br> (dự án 1)</div>
+                    </div>
+                  </li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">17</li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">18</li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">
+                    <div>
+                      <div class="d-flex justify-content-end">19</div>
+                      <div class="badge bg-secondary">Liên hoan tập thể</div>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="list-group list-group-horizontal row">
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">20</li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">21</li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">22</li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">23</li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">24</li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">25</li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">26</li>
+                </ul>
+                <ul class="list-group list-group-horizontal row">
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">27</li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">28</li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">29</li>
+                  <li class="list-group-item col d-flex justify-content-end" style="height: 100px;">
+                    <div>
+                      <div class="d-flex justify-content-end">30</div>
+                      <div class="badge bg-secondary">Thiết kế hệ thống <br> (dự án 1)</div>
+                    </div>
+                  </li>
+                  <li class="list-group-item col d-flex justify-content-end text-secondary" style="height: 100px;">1</li>
+                  <li class="list-group-item col d-flex justify-content-end text-secondary" style="height: 100px;">2</li>
+                  <li class="list-group-item col d-flex justify-content-end text-secondary" style="height: 100px;">3</li>
+                </ul>
+              </div>
+            </div>
+
+        </div>
+        <!--div chínnh-->
+        </div>
+    <!--footer-->
+    <div style="background-color: #313B48;" class="p-3 d-flex justify-content-center text-secondary">Một sản phẩm của nhóm 16</div>
+</body>
+</html>

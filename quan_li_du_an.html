@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap5/css/bootstrap.min.css">
+    <script src="/bootstrap5/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/icon/font/bootstrap-icons.min.css">
+    <title>Màn hình quản lí dự án</title>
+    <style>
+        .menu {
+            background-color: #F18903;
+        }
+        .hvmn:hover .item0 {
+            color:#EEF2FA;
+        }
+        .hvmn:hover .item1 {
+            color:#EEF2FA;
+        }
+        .hvmn:hover {
+            background-color:#F18903;
+            border-radius: 5px;
+        }
+        .carousel-indicators [data-bs-target] {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .dropdown-item:hover .bi-box-arrow-right {
+            color: red;
+        }
+        .dropdown-item:hover .dangxuat {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm menu">
+
+        <div class="container-fluid d-flex">
+            <div class="container">
+                <a href="/web/html/trang_chu.html" class="nav-link"><img src="/web/images/logo.png" alt="" style="width: 150px; height: 30px;"></a>
+            </div>
+
+            <div class="container d-flex justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link"><i class="bi bi-bell" style="font-size: 20px; padding-right: 5px; color: #004B87;"></i></a></li>
+                    <li class="nav-item"><a href="/web/html/trang_chu_dark_mode.html" class="nav-link"><i class="bi bi-moon" style="font-size: 20px; padding-right: 10px; color: #004B87;"></i></a></li>
+                </ul>
+                <div class="dropdown d-flex pt-1">
+                    <img src="/web/images/avatar.jpg" alt="" class="rounded-circle" style="width: 40px; height: 40px;">
+                    <a href="" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" style="color: #262b33; padding-left: 5px; color: #004B87;">Nguyễn Anh Đức</a>
+                    <ul class="dropdown-menu">
+                        <li><b style="color: #444444; padding-left: 10%;">Nguyễn Anh Đức</b></li>
+                        <li><h3 class="dropdown-header" style="padding-left: 25%;">Quản trị viên</h3></li>
+                        <li><a href="" class="dropdown-item border-top d-flex">
+                            <div><i class="bi bi-person" style="font-size: 20px;"></i></div>
+                            <div style="padding-left: 10px;" class="pt-1">Xem hồ sơ</div>
+                        </a></li>
+                        <li><a href="/web/html/login.html" class="dropdown-item border-top d-flex">
+                            <div><i class="bi bi-box-arrow-right" style="font-size: 20px;"></i></div>
+                            <div style="padding-left: 10px;" class="pt-1 dangxuat">Đăng xuất</div>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </nav>
+
+    <div class="navbar navbar-expand-sm bg-light border-bottom">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="" class="nav-link" style="color:#004B87;">Quản lí dự án</a></li>
+            <li class="nav-item"></li>
+        </ul>
+    </div>
+
+    <div class="d-flex" style="background-color: #EEF2FA; height: 100%;">
+        <div class="container-fluid border-end" style="padding-left: 0; padding-right: 0; width: 20%;">
+            <nav class="navbar bg-light">
+
+                <div class="container-fluid">
+                  <ul class="navbar-nav">
+                    <li class="nav-item border-bottom hvmn p-2">
+                      <a class="nav-link" href="/web/html/trang_chu.html" style="color: #004B87;">
+                        <i class="bi bi-house item0" style="font-size: 20px;"></i>
+                        <span style="font-size: 17px; padding-left: 10px;" class="item1">Trang chủ</span>
+                      </a>
+                    </li>
+                    <li class="nav-item border-bottom hvmn p-2">
+                      <a class="nav-link" href="/web/html/quan_li_nguoi_dung.html" style="color: #004B87;">
+                        <i class="bi bi-people item0" style="font-size: 20px;"></i>
+                        <span style="font-size: 17px; padding-left: 10px;" class="item1">Quản lí người dùng</span>
+                      </a>
+                    </li>
+                    <li class="nav-item border-bottom hvmn p-2" style="background-color: #F18903; border-radius: 5px;">
+                      <a class="nav-link" href="/web/html/quan_li_du_an.html" style="color: #004B87;">
+                        <i class="bi bi-database item0" style="font-size: 20px; color: #EEF2FA;"></i>
+                        <span style="font-size: 17px; padding-left: 10px; color: #EEF2FA;" class="item1">Quản lí dự án</span>
+                      </a>
+                    </li>
+                    <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/quan_li_cong_viec.html" style="color: #004B87;">
+                          <i class="bi bi-clipboard item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Quản lí công việc</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/theo_doi_tien_do.html" style="color: #004B87;">
+                          <i class="bi bi-graph-up-arrow item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Theo dõi tiến độ</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/quan_li_giao_tiep.html" style="color: #004B87;">
+                          <i class="bi bi-person-gear item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Quản lí giao tiếp</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/Lap_ke_hoach.html" style="color: #004B87;">
+                          <i class="bi bi-clipboard-plus item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Lập kế hoạch</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-bottom hvmn p-2">
+                        <a class="nav-link" href="/web/html/quan_li_tai_lieu.html" style="color: #004B87;">
+                          <i class="bi bi-file-earmark-word item0" style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Quản lí tài liệu</span>
+                        </a>
+                      </li>
+                      <li class="nav-item hvmn p-2">
+                        <a class="nav-link" href="/web/html/thong_bao.html" style="color: #004B87;">
+                          <i class="bi bi-bell item0"  style="font-size: 20px;"></i>
+                          <span style="font-size: 17px; padding-left: 10px;" class="item1">Thông báo</span>
+                        </a>
+                      </li>
+                  </ul>
+                </div>
+              
+              </nav>
+        </div>
+        <div class="container-fluid" style="max-width: 1250px;">
+          <!-- div1 -->
+            <div class="d-flex mt-5" style="margin-left: 10px;">
+
+              <!-- hộp tìm kiếm-->
+                <form class="d-flex">
+                  <input type="text" placeholder="Tìm kiếm dự án..." class="form-control me-2" id="i-timkiem">
+                  <button class="btn btn-outline-primary" style="width: 150px;" id="b-timkiem">Tìm kiếm</button>
+              </form>
+
+              <!-- tạo dự án-->
+              <div class="ms-3">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal">
+                  <i class="bi bi-plus"></i>
+                  Tạo dự án mới
+                </button>
+              
+                <!-- The Modal -->
+                <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="projectModalLabel">Tạo dự án mới</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form id="projectForm">
+                          <div class="mb-3">
+                            <label for="projectName" class="form-label">Tên dự án</label>
+                            <input type="text" class="form-control" id="projectName" required>
+                          </div>
+                          <div class="mb-3">
+                            <label for="startDate" class="form-label">Ngày bắt đầu</label>
+                            <input type="date" class="form-control" id="startDate" required>
+                          </div>
+                          <div class="mb-3">
+                            <label for="endDate" class="form-label">Ngày kết thúc</label>
+                            <input type="date" class="form-control" id="endDate" required>
+                          </div>
+                          <div class="mb-3">
+                            <label for="projectDescription" class="form-label">Mô tả dự án</label>
+                            <textarea class="form-control" id="projectDescription" rows="3" required></textarea>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Hủy bỏ</button>
+                        <button type="button" class="btn btn-primary" id="confirmButton" data-bs-dismiss="modal">Xác nhận</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+            </div>
+              <!-- Bắt đầu div chỉnh sửa dự án-->
+              <div>
+                <div class="ms-2">
+
+                  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                    <i class="bi bi-dash"></i>
+                    Chỉnh sửa dự án
+                  </button>
+                
+                  <!-- The Modal -->
+                  <div class="modal fade" id="projectModal1" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="projectModalLabel1">Chỉnh sửa dự án</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form id="projectForm">
+                            <div class="mb-3">
+                              <label for="projectName" class="form-label">Tên dự án</label>
+                              <input type="text" class="form-control" id="projectName1" required>
+                            </div>
+                            <div class="mb-3">
+                              <label for="startDate" class="form-label">Ngày bắt đầu</label>
+                              <input type="date" class="form-control" id="startDate1" required>
+                            </div>
+                            <div class="mb-3">
+                              <label for="endDate" class="form-label">Ngày kết thúc</label>
+                              <input type="date" class="form-control" id="endDate1" required>
+                            </div>
+                            <div class="mb-3">
+                              <label for="projectDescription1" class="form-label">Mô tả dự án</label>
+                              <textarea class="form-control" id="projectDescription1" rows="3" required></textarea>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Hủy bỏ</button>
+                          <button type="button" class="btn btn-primary" id="confirmButton" data-bs-dismiss="modal">Xác nhận</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+              </div>
+              </div>
+              <!-- pagination -->
+              <div class="ms-5" style="height: 30px;">
+                <ul class="pagination">
+                  <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+              </div>
+              <!-- pagination -->
+            </div>
+            <!-- div2 -->
+            <div class="d-flex">
+              <!--khung mô tả dự án bên trái-->
+              <div class="bg-light mt-4 rounded ms-2" style="height: 450px; max-width: 800px;">
+                <!-- dự án 1 -->
+                <div class="d-flex m-3">
+                  <span class="rounded bg-success text-light" style="max-width: 150px; height: 100px; line-height: 100px; font-size: 40px;">DA1</span>
+                  <div style="max-width: 600px; margin-left: 20px; height: 100px; font-size: 15px;">
+                    <div><b>Tên dự án:</b> Xây dựng hệ thống quản lí khách hàng</div>
+                    <div class="pt-3"><b>Ngày bắt đầu:</b> 1-6-2024</div>
+                    <div class="pt-3"><b>Ngày kết thúc:</b> 31-12-2024</div>
+                  </div>
+                </div>
+                <!--mô tả dự án-->
+              <div class="overflow-auto rounded bg-success ms-3 me-3" style="height: 250px;">
+                <div class="d-flex justify-content-center text-light pt-2" style="font-size: 20px;">MÔ TẢ DỰ ÁN</div>
+                <div class="text-light p-2 mb-3">
+                  Mục tiêu của dự án
+Quản lý thông tin khách hàng: Tập trung tất cả thông tin về khách hàng vào một cơ sở dữ liệu duy nhất, bao gồm thông tin liên lạc, lịch sử mua hàng, tương tác và phản hồi.
+Cải thiện dịch vụ khách hàng: Giúp nhân viên dễ dàng truy cập thông tin khách hàng để cung cấp dịch vụ tốt hơn và nhanh hơn.
+Tăng cường quản lý bán hàng: Hỗ trợ theo dõi cơ hội bán hàng, quản lý quy trình bán hàng và dự báo doanh thu.
+Hỗ trợ các chiến dịch tiếp thị: Tối ưu hóa việc tạo và quản lý các chiến dịch tiếp thị, bao gồm email marketing, SMS, và các hình thức khác.
+Báo cáo và phân tích: Cung cấp các báo cáo chi tiết và công cụ phân tích để đánh giá hiệu quả của các chiến dịch và hoạt động kinh doanh.
+2. Phạm vi của dự án
+Thiết kế và phát triển phần mềm: Phát triển ứng dụng CRM với các tính năng quản lý liên hệ, cơ hội bán hàng, quản lý chiến dịch tiếp thị, và báo cáo phân tích.
+Tích hợp hệ thống: Đảm bảo hệ thống CRM có thể tích hợp với các phần mềm và nền tảng hiện có của doanh nghiệp như ERP, email, và hệ thống thanh toán.
+Đào tạo và triển khai: Đào tạo nhân viên về cách sử dụng hệ thống CRM mới và hỗ trợ trong quá trình triển khai.
+Bảo mật và bảo trì: Đảm bảo hệ thống có các tính năng bảo mật mạnh mẽ và kế hoạch bảo trì dài hạn để đảm bảo hiệu suất và tính liên tục.
+3. Các giai đoạn của dự án
+Phân tích yêu cầu: Thu thập và phân tích các yêu cầu từ các bên liên quan để xác định các tính năng và chức năng cần thiết của hệ thống.
+Thiết kế hệ thống: Thiết kế kiến trúc phần mềm, giao diện người dùng và cơ sở dữ liệu.
+Phát triển và kiểm thử: Tiến hành lập trình, kiểm thử phần mềm để đảm bảo hệ thống hoạt động đúng như mong đợi.
+Triển khai: Cài đặt hệ thống, nhập dữ liệu ban đầu, và đào tạo người dùng.
+Bảo trì và nâng cấp: Cung cấp dịch vụ hỗ trợ, sửa lỗi, và cập nhật tính năng mới theo yêu cầu của người dùng.
+                </div>
+              </div>
+              </div>
+              <!-- khung bên phải-->
+              <div class="bg-light mt-4 rounded ms-2  overflow-auto" style=" height: 450px; max-width: 500px;">
+                <div class="d-flex justify-content-center mt-3">DANH SÁCH NHỮNG NGƯỜI THỰC HIỆN</div>
+                <div class="container mt-3">            
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>Họ và tên</th>
+                        <th>
+                          <div class="container">
+                            
+                            <div style="margin-left: 5px;" type="button" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                              <i class="bi bi-trash text-danger"></i>
+                            </div>
+                          
+                            <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title">Xác nhận xóa</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body text-center">
+                                    <i class="fas fa-trash trash-icon"></i>
+                                    <p>Bạn có chắc chắn muốn xóa tất cả không?</p>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Xác nhận</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" title="checkbox-title">
+                          <label class="form-check-label">
+                          </label>
+                        </div></td>
+                    <td>
+                      <img src="/web/images/tranthia.jpeg" alt="" style="width: 40px; height: 40px; border-radius: 50%;">
+                      Trần Thị A</td>
+                    <td>
+                      <div class="d-flex">
+                         
+                        <div style="margin-left: 5px;" type="button" data-bs-toggle="modal" data-bs-target="#deleteModal1">
+                          <i class="bi bi-person-dash text-danger"></i>
+                        </div>
+                          
+                            <div class="modal fade" id="deleteModal1" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title">Xác nhận xóa</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body text-center">
+                                    <i class="fas fa-trash trash-icon"></i>
+                                    <p>Bạn có chắc chắn muốn xóa người dùng này không?</p>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Xác nhận</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                      </div>
+                    </td>
+                      </tr>
+                      <tr>
+                        <td><div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" title="checkbox-title">
+                          <label class="form-check-label">
+                          </label>
+                        </div></td>
+                    <td>
+                      <img src="/web/images/nguyenvanb.jpeg" alt="" style="width: 40px; height: 40px; border-radius: 50%;">
+                        Nguyễn Văn B</td>
+                    <td>
+                      <div class="d-flex">
+                       
+                        <div style="margin-left: 5px;" type="button" data-bs-toggle="modal" data-bs-target="#deleteModal2">
+                          <i class="bi bi-person-dash text-danger"></i>
+                        </div>
+                          
+                            <div class="modal fade" id="deleteModal2" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title">Xác nhận xóa</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body text-center">
+                                    <i class="fas fa-trash trash-icon"></i>
+                                    <p>Bạn có chắc chắn muốn xóa người dùng này không?</p>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Xác nhận</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                      </div>
+                    </td>
+                      </tr>
+                      <tr>
+                        <td><div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" title="checkbox-title">
+                          <label class="form-check-label">
+                          </label>
+                        </div></td>
+                    <td>
+                      <img src="/web/images/phamthic.jpeg" alt="" style="width: 40px; height: 40px; border-radius: 50%;">
+                        Phạm Thị C</td>
+                    <td>
+                      <div class="d-flex">
+                      
+                        <div style="margin-left: 5px;" type="button" data-bs-toggle="modal" data-bs-target="#deleteModal3">
+                          <i class="bi bi-person-dash text-danger"></i>
+                        </div>
+                          
+                            <div class="modal fade" id="deleteModal3" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title">Xác nhận xóa</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body text-center">
+                                    <i class="fas fa-trash trash-icon"></i>
+                                    <p>Bạn có chắc chắn muốn xóa người dùng này không?</p>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Xác nhận</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                      </div>
+                    </td>
+                      </tr>
+                      <tr>
+                        <td><div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" title="checkbox-title">
+                          <label class="form-check-label">
+                          </label>
+                        </div></td>
+                    <td>
+                      <img src="/web/images/luuquangd.jpeg" alt="" style="width: 40px; height: 40px; border-radius: 50%;">
+                        Lưu Quang D</td>
+                    <td>
+                      <div class="d-flex">
+                         
+                        <div style="margin-left: 5px;" type="button" data-bs-toggle="modal" data-bs-target="#deleteModal4">
+                          <i class="bi bi-person-dash text-danger"></i>
+                        </div>
+                          
+                            <div class="modal fade" id="deleteModal4" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title">Xác nhận xóa</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body text-center">
+                                    <i class="fas fa-trash trash-icon"></i>
+                                    <p>Bạn có chắc chắn muốn xóa người dùng này không?</p>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Xác nhận</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                      </div>
+                    </td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+
+                <div>
+                  <button type="button" class="btn btn-primary ms-5" data-bs-toggle="modal" data-bs-target="#myModal1">
+                      <i class="bi bi-plus"></i>
+                      Thêm người thực hiện
+                    </button>
+                    
+                    <div class="modal" id="myModal1">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                    
+                          <div class="modal-header">
+                            <h4 class="modal-title" style="color: #004B87;">Thêm người thực hiện</h4>
+                          </div>
+                    
+                          <div class="modal-body">
+                              <form>
+                                  <div class="mb-3">
+                                      <label class="form-label">Họ và tên</label>
+                                      <input type="text" class="form-control" placeholder="Nhập họ và tên">
+                                  </div>
+                                  <button type="submit" class="btn btn-primary">Xác nhận</button>
+                              </form>
+                          </div>
+                    
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Hủy</button>
+                          </div>
+                    
+                        </div>
+                      </div>
+                    </div>
+              </div>
+
+              </div>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <div style="background-color: #313B48;" class="p-3 d-flex justify-content-center text-secondary">Một sản phẩm của nhóm 16</div>
+</body>
+</html>
